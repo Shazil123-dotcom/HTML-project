@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex's Website</title>
+    <meta name="description" content="Welcome to Alex's personal website! Explore details about Alex, a fitness influencer, and his journey. Get in touch, learn more, and stay inspired.">
+    <meta name="keywords" content="Alex, fitness influencer, personal website, health, wellness, about me, contact">
+    <meta name="author" content="Alex">
+    <meta name="robots" content="index, follow">
+    <title>My Website</title>
     <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-     /* Navigation Bar */
-     .nav-container {
+        .nav-container {
             background-color: #222;
             padding: 15px 0;
             position: fixed;
@@ -25,10 +36,6 @@
             padding: 0;
         }
 
-        nav ul li {
-            display: inline;
-        }
-
         nav ul li a {
             color: white;
             text-decoration: none;
@@ -41,217 +48,123 @@
             color: #f0a500;
         }
 
-
-        /* General Styles */
-        body {
-            background-image: url('wallaper.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        /* Header Styling */
-        h1 {
-            font-size: 70px;
-            font-weight: bold;
-            margin-top: 50px;
-            text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.3);
-        }
-
-        h2 {
-            font-size: 40px;
-            font-style: italic;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            margin-top: 30px;
-        }
-
-        p {
-            font-size: 18px;
-            font-weight: 500;
-            max-width: 70%;
-            margin: 10px auto;
-            line-height: 1.6;
-        }
-
-        hr {
-            width: 60%;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            margin: 30px auto;
-        }
-
-        /* Intro Section */
-        .intro {
-            background: rgba(56, 53, 58, 0.9);
-            padding: 40px;
-            border-radius: 15px;
-            width: 60%;
-            margin: 40px auto;
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-        }
-
-        .intro img {
-            width: 250px;
-            border-radius: 50%;
-            margin: 20px 0;
-            border: 4px solid white;
-        }
-
-        /* Hobbies Section */
-        .container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            background-color: rgba(56, 53, 58, 0.9);
-            border-radius: 15px;
-            padding: 30px;
-            width: 80%;
-            margin: 40px auto;
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-        }
-
-
         .controls {
             margin-top: 80px;
         }
 
-
-        .section {
-            flex: 1;
-            min-width: 250px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .section img {
-            width: 200px;
+        .content-box {
+            background-color: #1e1e1e;
+            padding: 40px;
+            margin: 30px auto;
+            width: 80%;
+            max-width: 600px;
             border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
             box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
         }
 
-        .section img:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
-        }
-
-        .section p {
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 10px;
+        .highlight {
+            color: yellow;
         }
     </style>
 </head>
 <body>
 
-        <!-- Navigation Bar -->
-        <header>
-            <div class="nav-container">
-                <nav>
-                    <ul>
-                        <li><a href="about.html">Home</a></li>
-                        <li><a href="contactme.html">Contact</a></li>
-                        <li><a href="sigma.html">About Me</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <div class="controls">
-            <label for="language">Choose Language:</label>
-            <select id="language" onchange="changeLanguage()">
-                <option value="en">English</option>
-                <option value="es">Español</option>    
-            </select>
+    <header>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a id="nav-contact" href="contact.html">Contact</a></li>
+                    <li><a id="nav-about" href="sigma.html">About Me</a></li>
+                    <li><a id="nav-home" href="index.html">Home</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-    <!-- Main Heading -->
-     <br><br>
-     <h1 id="title">Welcome to My Website</h1>
-     <div class="intro">
-         <h2 id="intro-title">A Brief Introduction to Alex</h2>
-         <img src="https://tinyurl.com/mr7kys36" alt="Alex">
-         <p id="intro-text1">32 years old, always striving for self-improvement.</p>
-         <p id="intro-text2">Alex Carter follows a rigorous workout routine to maintain his muscular physique.</p>
-         <p id="intro-text3">Incorporates calisthenics for flexibility, endurance, and body control.</p>
-         <p id="intro-text4">Nutrition plays a key role, focusing on protein-rich meals.</p>
-         <p id="intro-text5">In his free time, he enjoys playing Fortnite.</p>
-         <h2>Some of Alex's Hobbies</h2>
-         <div class="container">
-             <div class="section">
-                 <p>🏋️‍♂️ <strong>Working Out</strong></p>
-                 <img src="https://tinyurl.com/346ye37j" alt="Working Out">
-             </div>
-             <div class="section">
-                 <p>🤸‍♂️ <strong>Calisthenics</strong></p>
-                 <img src="https://tinyurl.com/yrbpzha8" alt="Calisthenics">
-             </div>
-             <div class="section">
-                 <p>🍽 <strong>Eating Food</strong></p>
-                 <img src="https://tinyurl.com/mrj9t4be" alt="Food">
-             </div>
-             <div class="section">
-                 <p>🎮 <strong>Playing Fortnite</strong></p>
-                 <img src="https://tinyurl.com/y2zwtuxr" alt="Fortnite">
-             </div>
-         </div>
+    <div class="controls">
+        <label id="choose-lang" for="language">Choose Language:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+        </select>
+    </div>
 
-     
-    
+    <main class="content-box">
+        <h1 id="welcome-text"><span class="highlight">Welcome to My Website</span></h1>  
+        <p id="homepage-text">This is the homepage. Here you can find various details about me and my journey.</p>
+        
+        <section class="about-section">
+            <h2 id="about-title">About Alex</h2>
+            <img src="Alex.webp" alt="Alex" width="250">
+            <div class="info-card">
+                <h3 id="intro-text">Introduction</h3>
+                <p><strong id="name-text">Name:</strong> Alex</p>
+                <p><strong id="age-text">Age:</strong> 32</p>
+                <p><strong id="occupation-text">Occupation:</strong> Fitness Influencer</p>
+            </div>
+        </section>
+    </main>
+
     <script>
         const translations = {
             en: {
-                title: "Welcome to My Website",
-                "intro-title": "A Brief Introduction to Alex",
-                "intro-text1": "32 years old, always striving for self-improvement.",
-                "intro-text2": "Alex Carter follows a rigorous workout routine to maintain his muscular physique.",
-                "intro-text3": "Incorporates calisthenics for flexibility, endurance, and body control.",
-                "intro-text4": "Nutrition plays a key role, focusing on protein-rich meals.",
-                "intro-text5": "In his free time, he enjoys playing Fortnite.",
-                "hobbies-title": "Some of Alex's Hobbies",
-                hobby1: "🏋️‍♂️ <strong>Working Out</strong>",
-                hobby2: "🤸‍♂️ <strong>Calisthenics</strong>",
-                hobby3: "🍽 <strong>Eating Food</strong>",
-                hobby4: "🎮 <strong>Playing Fortnite</strong>"
+                chooseLang: "Choose Language:",
+                welcome: "<span class='highlight'>Welcome to My Website</span> ",
+                homepage: "This is the homepage. Here you can find various details about me and my journey.",
+                about: "About Alex",
+                intro: "Introduction",
+                name: "Name:",
+                age: "Age:",
+                occupation: "Occupation:",
+                navContact: "Contact",
+                navAbout: "About Me",
+                navHome: "Home"
             },
             es: {
-                title: "Bienvenido a mi sitio web",
-                "intro-title": "Una breve introducción a Alex",
-                "intro-text1": "32 años, siempre esforzándose por mejorar.",
-                "intro-text2": "Alex Carter sigue una rutina de ejercicios rigurosa para mantener su físico muscular.",
-                "intro-text3": "Incorpora calistenia para flexibilidad, resistencia y control corporal.",
-                "intro-text4": "La nutrición juega un papel clave, enfocándose en comidas ricas en proteínas.",
-                "intro-text5": "En su tiempo libre, disfruta jugando Fortnite.",
-                "hobbies-title": "Algunos pasatiempos de Alex",
-                hobby1: "🏋️‍♂️ <strong>Hacer ejercicio</strong>",
-                hobby2: "🤸‍♂️ <strong>Calistenia</strong>",
-                hobby3: "🍽 <strong>Comer comida</strong>",
-                hobby4: "🎮 <strong>Jugar Fortnite</strong>"
+                chooseLang: "Elige un idioma:",
+                welcome: "<span class='highlight'>Bienvenido a Mi Sitio Web</span> ",
+                homepage: "Esta es la página de inicio. Aquí puedes encontrar varios detalles sobre mí y mi viaje.",
+                about: "Sobre Alex",
+                intro: "Introducción",
+                name: "Nombre:",
+                age: "Edad:",
+                occupation: "Ocupación:",
+                navContact: "Contacto",
+                navAbout: "Sobre Mí",
+                navHome: "Inicio"
+            },
+            fr: {
+                chooseLang: "Choisissez une langue :",
+                welcome: "<span class='highlight'>Bienvenue sur Mon Site Web</span> ",
+                homepage: "Ceci est la page d'accueil. Ici, vous pouvez trouver divers détails sur moi et mon parcours.",
+                about: "À propos d'Alex",
+                intro: "Introduction",
+                name: "Nom:",
+                age: "Âge:",
+                occupation: "Profession:",
+                navContact: "Contact",
+                navAbout: "À Propos",
+                navHome: "Accueil"
             }
         };
 
         function changeLanguage() {
-            const lang = document.getElementById("language").value;
-            document.getElementById("title").innerText = translations[lang].title;
-            document.getElementById("intro-title").innerText = translations[lang]["intro-title"];
-            document.getElementById("intro-text1").innerText = translations[lang]["intro-text1"];
-            document.getElementById("intro-text2").innerText = translations[lang]["intro-text2"];
-            document.getElementById("intro-text3").innerText = translations[lang]["intro-text3"];
-            document.getElementById("intro-text4").innerText = translations[lang]["intro-text4"];
-            document.getElementById("intro-text5").innerText = translations[lang]["intro-text5"];
-            document.getElementById("hobbies-title").innerText = translations[lang]["hobbies-title"];
-            document.getElementById("hobby1").innerHTML = translations[lang].hobby1;
-            document.getElementById("hobby2").innerHTML = translations[lang].hobby2;
-            document.getElementById("hobby3").innerHTML = translations[lang].hobby3;
-            document.getElementById("hobby4").innerHTML = translations[lang].hobby4;
+            const lang = document.getElementById('language').value;
+            document.getElementById('choose-lang').textContent = translations[lang].chooseLang;
+            document.getElementById('welcome-text').innerHTML = translations[lang].welcome;
+            document.getElementById('homepage-text').textContent = translations[lang].homepage;
+            document.getElementById('about-title').textContent = translations[lang].about;
+            document.getElementById('intro-text').textContent = translations[lang].intro;
+            document.getElementById('name-text').textContent = translations[lang].name;
+            document.getElementById('age-text').textContent = translations[lang].age;
+            document.getElementById('occupation-text').textContent = translations[lang].occupation;
+
+            // Update navigation menu
+            document.getElementById('nav-contact').textContent = translations[lang].navContact;
+            document.getElementById('nav-about').textContent = translations[lang].navAbout;
+            document.getElementById('nav-home').textContent = translations[lang].navHome;
         }
     </script>
-    
-
 </body>
 </html>
