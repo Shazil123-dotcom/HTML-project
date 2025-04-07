@@ -159,16 +159,16 @@
             <div class="nav-container">
                 <nav>
                     <ul>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="sigma.html">About Me</a></li>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a id="nav-contact" href="contact.html">Contact</a></li>
+                        <li><a id="nav-about" href="sigma.html">About Me</a></li>
+                        <li><a id="nav-home" href="index.html">Home</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
         <div class="controls">
-            <label for="language">Choose Language:</label>
+            <label id="choose-lang" for="language">Choose Language:</label>
             <select id="language" onchange="changeLanguage()">
                 <option value="en">English</option>
                 <option value="es">Español</option>    
@@ -186,22 +186,22 @@
          <p id="intro-text3">Incorporates calisthenics for flexibility, endurance, and body control.</p>
          <p id="intro-text4">Nutrition plays a key role, focusing on protein-rich meals.</p>
          <p id="intro-text5">In his free time, he enjoys playing Fortnite.</p>
-         <h2>Some of Alex's Hobbies</h2>
+         <h2 id="hobbies-title">Some of Alex's Hobbies</h2>
          <div class="container">
              <div class="section">
-                 <p>🏋️‍♂️ <strong>Working Out</strong></p>
+                 <p id="Working Out">🏋️‍♂️ <strong>Working Out</strong></p>
                  <img src="working out.png" alt="Working Out">
              </div>
              <div class="section">
-                 <p>🤸‍♂️ <strong>Calisthenics</strong></p>
+                 <p id="Calistenia">🤸‍♂️ <strong >Calisthenics</strong></p>
                  <img src="Calisthenics.webp" alt="Calisthenics">
              </div>
              <div class="section">
-                 <p>🍽 <strong>Eating Food</strong></p>
+                 <p id="Eating Food">🍽 <strong >Eating Food</strong></p>
                  <img src="eating.jpg" alt="Food">
              </div>
              <div class="section">
-                 <p>🎮 <strong>Playing Fortnite</strong></p>
+                 <p id="Playing Fortnite">🎮 <strong>Playing Fortnite</strong></p>
                  <img src="fortnite.avif" alt="Fortnite">
              </div>
          </div>
@@ -212,6 +212,9 @@
         const translations = {
             en: {
                 title: "Welcome to My Website",
+                navContact: "Contact",
+                navAbout: "About Me",
+                navHome: "Home",
                 "intro-title": "A Brief Introduction to Alex",
                 "intro-text1": "32 years old, always striving for self-improvement.",
                 "intro-text2": "Alex Carter follows a rigorous workout routine to maintain his muscular physique.",
@@ -219,13 +222,17 @@
                 "intro-text4": "Nutrition plays a key role, focusing on protein-rich meals.",
                 "intro-text5": "In his free time, he enjoys playing Fortnite.",
                 "hobbies-title": "Some of Alex's Hobbies",
-                hobby1: "🏋️‍♂️ <strong>Working Out</strong>",
-                hobby2: "🤸‍♂️ <strong>Calisthenics</strong>",
-                hobby3: "🍽 <strong>Eating Food</strong>",
-                hobby4: "🎮 <strong>Playing Fortnite</strong>"
+                "hobby1": "🏋️‍♂️ <strong>Working Out</strong>",
+                "hobby2": "🤸‍♂️ <strong>Calisthenics</strong>",
+                "hobby3": "🍽 <strong>Eating Food</strong>",
+                "hobby4": "🎮 <strong>Playing Fortnite</strong>",
+                chooseLang: "Choose Language:"
             },
             es: {
                 title: "Bienvenido a mi sitio web",
+                navContact: "Contacto",
+                navAbout: "Sobre Mí",
+                navHome: "Inicio",
                 "intro-title": "Una breve introducción a Alex",
                 "intro-text1": "32 años, siempre esforzándose por mejorar.",
                 "intro-text2": "Alex Carter sigue una rutina de ejercicios rigurosa para mantener su físico muscular.",
@@ -233,30 +240,42 @@
                 "intro-text4": "La nutrición juega un papel clave, enfocándose en comidas ricas en proteínas.",
                 "intro-text5": "En su tiempo libre, disfruta jugando Fortnite.",
                 "hobbies-title": "Algunos pasatiempos de Alex",
-                hobby1: "🏋️‍♂️ <strong>Hacer ejercicio</strong>",
-                hobby2: "🤸‍♂️ <strong>Calistenia</strong>",
-                hobby3: "🍽 <strong>Comer comida</strong>",
-                hobby4: "🎮 <strong>Jugar Fortnite</strong>"
+                "hobby1": "🏋️‍♂️ <strong>Hacer ejercicio</strong>",
+                "hobby2": "🤸‍♂️ <strong>Calistenia</strong>",
+                "hobby3": "🍽 <strong>Comer comida</strong>",
+                "hobby4": "🎮 <strong>Jugar Fortnite</strong>",
+                chooseLang: "Elige un idioma:"
+                
             }
         };
 
         function changeLanguage() {
-            const lang = document.getElementById("language").value;
-            document.getElementById("title").innerText = translations[lang].title;
-            document.getElementById("intro-title").innerText = translations[lang]["intro-title"];
-            document.getElementById("intro-text1").innerText = translations[lang]["intro-text1"];
-            document.getElementById("intro-text2").innerText = translations[lang]["intro-text2"];
-            document.getElementById("intro-text3").innerText = translations[lang]["intro-text3"];
-            document.getElementById("intro-text4").innerText = translations[lang]["intro-text4"];
-            document.getElementById("intro-text5").innerText = translations[lang]["intro-text5"];
-            document.getElementById("hobbies-title").innerText = translations[lang]["hobbies-title"];
-            document.getElementById("hobby1").innerHTML = translations[lang].hobby1;
-            document.getElementById("hobby2").innerHTML = translations[lang].hobby2;
-            document.getElementById("hobby3").innerHTML = translations[lang].hobby3;
-            document.getElementById("hobby4").innerHTML = translations[lang].hobby4;
-        }
+    const lang = document.getElementById("language").value;
+
+    document.getElementById("title").innerText = translations[lang].title;
+    document.getElementById('choose-lang').textContent = translations[lang].chooseLang;
+    document.getElementById("intro-title").innerText = translations[lang]["intro-title"];
+    document.getElementById("intro-text1").innerText = translations[lang]["intro-text1"];
+    document.getElementById("intro-text2").innerText = translations[lang]["intro-text2"];
+    document.getElementById("intro-text3").innerText = translations[lang]["intro-text3"];
+    document.getElementById("intro-text4").innerText = translations[lang]["intro-text4"];
+    document.getElementById("intro-text5").innerText = translations[lang]["intro-text5"];
+    document.getElementById("hobbies-title").innerHTML = translations[lang]["hobbies-title"];
+
+    // Fix Hobbies Translation
+    document.getElementById('nav-contact').textContent = translations[lang].navContact;
+            document.getElementById('nav-about').textContent = translations[lang].navAbout;
+            document.getElementById('nav-home').textContent = translations[lang].navHome;
+    document.getElementById("Working Out").innerHTML = translations[lang]["hobby1"];
+    document.getElementById("Calistenia").innerHTML = translations[lang]["hobby2"];
+    document.getElementById("Eating Food").innerHTML = translations[lang]["hobby3"];
+    document.getElementById("Playing Fortnite").innerHTML = translations[lang]["hobby4"];
+
+    // Fix Navigation
+
+}
     </script>
-    
+
 
 </body>
 </html>
